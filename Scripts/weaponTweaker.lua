@@ -1,7 +1,6 @@
 local weaponTweaker = {}
 
 function weaponTweaker:applyToDataTable(dataTable, weaponValues)
-
     for weapon_id, weapon_tweakvalues in pairs(weaponValues) do
         local weaponRow = dataTable:FindRow(weapon_id)
         if weaponRow and weaponRow:IsValid() then
