@@ -1,8 +1,7 @@
 -- Weapon tweak values.
 -- Any values not listed here means it's vanilla values.
--- Please note that tube-fed shotguns are hardcoded to hold no more than 6 shells,
--- and they get unhappy if you try to give them more.
--- TODO: Can we fix that? I doubt it
+-- Note: tube-fed shotguns are hardcoded to hold no more than 6 shells,
+-- and they seem to get unhappy if you try to give them more.
 
 -- damage, magazine and recoil is applied to the ItemData.WeaponData. weight and durability is applied to ItemData.
 local weaponValues = {
@@ -125,7 +124,6 @@ local weaponValues = {
     -- Thumper Shotgun (Romag Shotgun Upgrade 1)
     shotgun_military_U1 = {
         damage = 35,
-        -- TODO: Can we mess with the magazine size? Probably not
         durability = 200
     },
     -- Snowfall Shotgun (Romag Shotgun Upgrade 2)

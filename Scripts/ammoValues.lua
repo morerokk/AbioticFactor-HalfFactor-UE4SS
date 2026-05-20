@@ -71,7 +71,7 @@ local dropchance_default = 0.4 -- This is down from 0.5 to compensate for the ne
 local dropchance_guaranteed = 1.0
 
 
--- Kinda ass. Structure is:
+-- Kinda convoluted. Structure is:
 --[[
     (droptable_name) = {
         (item_name) = {

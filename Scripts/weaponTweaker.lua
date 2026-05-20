@@ -1,12 +1,14 @@
 local weaponTweaker = {}
 
+-- DataTables stuff, doesn't work in old UE4SS version
+
 function weaponTweaker:applyToDataTable(dataTable, weaponValues)
     for weapon_id, weapon_tweakvalues in pairs(weaponValues) do
         local weaponRow = dataTable:FindRow(weapon_id)
         if weaponRow and weaponRow:IsValid() then
             self:applyToItemData(weaponRow, weapon_tweakvalues)
         else
-            print("[Half Factor Lua] Unable to find datatable row for weapon " .. weapon_id)
+            print("[Half Factor Lua] Unable to find datatable row for weapon " .. weapon_id .. "\n")
         end
     end
 end
