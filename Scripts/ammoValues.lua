@@ -62,7 +62,7 @@ local sniper_high = {
     max = 20
 }
 local sniper_extreme = {
-    min = 1,
+    min = 60,
     max = 100
 }
 

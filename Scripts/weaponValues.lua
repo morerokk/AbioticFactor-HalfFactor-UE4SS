@@ -36,9 +36,10 @@ local weaponValues = {
         damage = 30,
         durability = 150
     },
-    -- Scrapshot (TODO: add bleed? can we do that? seems low-ish priority but should be looked into)
+    -- Scrapshot
+    -- (TODO: add bleed? can we do that? seems low-ish priority but should be looked into)
     -- Should probably take DamageType_Hitscan from another weapon and apply it to this one?
-    -- Idk if that works for status effects but it should work for damage types
+    -- Idk if that works for status effects but it should work for damage types. Maybe just wait for Abiotic Schema
     scrapshot = {
         damage = 20,
         durability = 250
@@ -71,7 +72,8 @@ local weaponValues = {
     },
     -- Energy Pistol
     pistol_energy = {
-        damage = 25
+        -- Fires 5 ticks of damage
+        damage = 15
     },
     -- Flamethrower
     flamethrower = {
@@ -157,9 +159,8 @@ local weaponValues = {
     },
     -- Laser Pistol (Energy Pistol Upgrade 1)
     pistol_energy_U1 = {
-        -- TODO: Both this and the energy pistol are probably too high, this is probably per tick.
-        -- There aren't as many ticks as it looks, but it's probably still too much for a rechargeable weapon.
-        -- This can one-tap a lot of stuff
+        -- Fires 2 ticks of damage
+        -- and also fires a lot faster than the Energy Pistol
         damage = 50
     },
     -- Manomin Magnum (Desert Eagle gatekeeper)
