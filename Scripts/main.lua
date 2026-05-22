@@ -5,7 +5,7 @@ local ammoTweaker = require("ammoTweaker")
 
 local oldUE4SSCompat = require("oldUE4SSCompat")
 
-local function runOldUE4SSCompat(weaponValues, ammoValues)
+local function runOldUE4SSCompat()
     print("[Half Factor Lua] Detected older UE4SS version, falling back to ONLY changing magazine sizes. Please use the Half Factor .pak version or update UE4SS.\n")
     oldUE4SSCompat:setupWeapons(weaponValues)
     oldUE4SSCompat:setupAmmo(ammoValues)
@@ -25,13 +25,13 @@ ExecuteInGameThread(function()
 
     if not weaponsDt or not weaponsDt.FindRow then
         -- Old UE4SS version
-        runOldUE4SSCompat(weaponValues, ammoValues)
+        runOldUE4SSCompat()
         return
     end
     local testWeaponRow = weaponsDt:FindRow("pistol_security")
     if not testWeaponRow or not testWeaponRow.IsValid then
         -- Old UE4SS version
-        runOldUE4SSCompat(weaponValues, ammoValues)
+        runOldUE4SSCompat()
         return
     end
 
