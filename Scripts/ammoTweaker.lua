@@ -17,6 +17,16 @@ function ammoTweaker:applyToItemDropTable(itemDropTable, tweakValues)
     itemDropTable.SalvageDropItems_4_6F67F05F401125FAC788E4B1800CBC93:ForEach(function(index, elem)
         local entry = elem:get()
         local itemName = entry.ItemDataTable_16_C430AEEE4D16DC471206DBBAA9F6796F.RowName:ToString()
+        if not itemName then
+            return
+        end
+
+        -- Capitalization of item names is incredibly inconsistent.
+        -- Even if the game files consistently call it "ammo_556",
+        -- by the time we end up here, it might be "Ammo_556" instead at runtime, but not always?
+        -- Therefore, we just call string.lower on everything and make sure the tweakvalues have it in lowercase too
+        itemName = string.lower(itemName)
+
         if tweakValues[itemName] ~= nil then
             self:applyToItemDropTableEntry(entry, tweakValues[itemName])
             elem:set(entry)

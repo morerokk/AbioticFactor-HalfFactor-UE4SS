@@ -1,4 +1,4 @@
--- Ammo drop values
+-- Ammo drop values.
 
 -- ammo_9mm
 local pistol_low = {
@@ -80,6 +80,9 @@ local dropchance_guaranteed = 1.0
         }
     }
 ]]
+-- NOTE: Even if the game has uppercase letters in the ammo item name, we always call string.lower on them now.
+-- (so ammo_magnum, ammo_308 and not ammo_Magnum, Ammo_308).
+-- Ammo item names are very inconsistent, possibly related to the asset not being loaded yet
 local ammoValues = {
     loot_grunt = {
         ["ammo_9mm"] = {
@@ -88,7 +91,7 @@ local ammoValues = {
         }
     },
     loot_grunt_captain = {
-        ["ammo_Magnum"] = {
+        ["ammo_magnum"] = {
             values = magnum_default,
             chance = dropchance_default
         }
@@ -106,7 +109,7 @@ local ammoValues = {
         }
     },
     loot_gatekeeper_chieftain = {
-        ["ammo_Magnum"] = {
+        ["ammo_magnum"] = {
             values = magnum_high,
             chance = dropchance_default
         }
@@ -148,7 +151,7 @@ local ammoValues = {
         }
     },
     loot_OrnateCrate = {
-        ["ammo_Magnum"] = {
+        ["ammo_magnum"] = {
             values = magnum_high,
             chance = dropchance_default
         },
@@ -172,7 +175,7 @@ local ammoValues = {
         }
     },
     loot_InqCrate = {
-        ["ammo_Magnum"] = {
+        ["ammo_magnum"] = {
             values = magnum_veryhigh,
             chance = dropchance_default
         }
