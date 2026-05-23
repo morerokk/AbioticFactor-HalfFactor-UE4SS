@@ -83,7 +83,7 @@ local dropchance_guaranteed = 1.0
 local ammoValues = {
     loot_grunt = {
         ["ammo_9mm"] = {
-            values = pistol_low,
+            values = pistol_default,
             chance = dropchance_default
         }
     },
@@ -143,7 +143,7 @@ local ammoValues = {
     },
     loot_grunt_guard = {
         ["ammo_9mm"] = {
-            values = pistol_default,
+            values = pistol_low,
             chance = dropchance_default
         }
     },
